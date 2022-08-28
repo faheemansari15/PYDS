@@ -21,3 +21,8 @@ print("u are: ", msg.count("u"))
 for vowel in "aeiou":
     print(vowel, msg.lower().count(vowel))
     print(f"{vowel} counted {msg.lower().count(vowel)} times")
+
+
+for vowel in "aAeEiIoOuU":
+    print(vowel, msg.count(vowel))
+    print(f"{vowel} counted {msg.count(vowel)} times")    

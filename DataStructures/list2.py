@@ -13,3 +13,7 @@ print("list1[-1]: ", list1[-1])
 
 # Last Third item
 print("list1[-3]: ", list1[-3])
+
+# Fourth, Fifth and Seventh item
+
+print("list1[3]:", list1[3], ",", "list1[4]:", list1[4], ",", "list1[6]:", list1[6]) 
