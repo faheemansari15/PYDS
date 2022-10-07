@@ -1,0 +1,12 @@
+mobile->redmi
+price->Theek thaak
+expiry->2030
+features->Camera kamaal ka he
+mobile->redmi
+price->Theek thaak
+expiry->2030
+features->Camera kamaal ka he
+mobile->redmi
+price->Theek thaak
+expiry->2030
+features->Camera kamaal ka he
