@@ -29,4 +29,4 @@ for key, data in emps.items():
     print(key, "⏬")
     for k, v in data.items():
         print(k, v)    
-    print("- -" * 10)    
+    print("- -" * 10) 

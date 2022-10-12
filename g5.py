@@ -5,7 +5,7 @@ HEIGHT = 500
 WIDTH = 700
 score = 0 
 player = Actor('character_0000', pos=(WIDTH//2,HEIGHT//2))
-item = Actor('character_0008', pos=(50,50))    
+item = Actor('character_0001', pos=(50,50))    
 speed = 3
 
 music.play('bgmusic')

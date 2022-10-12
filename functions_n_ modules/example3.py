@@ -1,7 +1,7 @@
 data = "" # global variable
 
 def data_appender(s):
-    global data # this line tell data_appender that we have a global variable data
+    global data # this line tells data_appender that we have a global variable data
     #if len(s) > 0:
     data += s
 

@@ -24,6 +24,5 @@ def update():
     if keyboard.down:
         alienb.y += speed
     if alienb.colliderect(alieng):
-        sounds.sound1.play()
-pgzrun.go()
-        
+        sounds.sounds_sound2.play()
+pgzrun.go() 

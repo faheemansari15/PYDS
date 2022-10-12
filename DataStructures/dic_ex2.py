@@ -26,4 +26,4 @@ for key in movies:
 # traversing a dictionary -> style 4 -> gives only keys and values
 print("style 4")
 for k, v in movies.items():
-    print(k, v)
+    print(k, v) 
