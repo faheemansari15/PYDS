@@ -8,6 +8,6 @@ for num in range(2, 20):
             break
     else:
         x.append(num)
-        print(num, end=" ")
+        print(numK, end=" ")
 #for p in x:
     #print(p, end=" ")        

@@ -15,8 +15,8 @@ for name in movies:
 
 # traversing a dictionary -> style 2 -> gives only values    
 print("style 2")
-for key in movies:
-    print(movies[key])
+for values in movies:
+    print(movies[values])
 
 # traversing a dictionary -> style 3 -> gives only keys and values
 print("style 3")

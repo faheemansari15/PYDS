@@ -29,5 +29,5 @@ if amt > 1000:
 if pm == 'credit':
     amt -= 100
 amt += amt*.18 # GST 3%
-print('Your final amount') 
+print('Your final amount using GST') 
 print(amt)   

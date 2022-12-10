@@ -1,9 +1,5 @@
 # Append Function
 
-from audioop import reverse
-from pickle import TRUE
-
-
 fruits = []
 fruits.append("Apple")
 fruits.append("Banana")
@@ -34,7 +30,7 @@ print(fruits)
 #fruits.reverse()
 #print(fruits)
 
-fruits.sort(reverse=True)
+fruits.sort(reverse=False)
 print(fruits)
 
 l = fruits[::-1]

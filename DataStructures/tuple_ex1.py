@@ -8,7 +8,7 @@ my_tuple = 3, 4.6, "Apple"
 print(my_tuple)
 
 #Concatenation
-print((1, 2, 3) + (4, 5, 6))
+print((4, 5, 6) + (1, 2, 3))
 print(("Faheem Kausar ") + ("Ansari"))
 print((5,) + (10,))
 
