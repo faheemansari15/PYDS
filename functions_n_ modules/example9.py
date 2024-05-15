@@ -6,3 +6,7 @@ def saveInfo(file = "info.txt", **kwargs):
             f.write(f"{k}->{v}\n")
 
 saveInfo(mobile="redmi", price="Theek thaak", expiry="2030", features="Camera kamaal ka he")            
+
+f = open("info.txt", "r")
+for x in f:
+    print(x)

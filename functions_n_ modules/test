@@ -1,0 +1,463 @@
+# # Write Python3 code here
+  
+# class car():
+      
+#     # init method or constructor
+#     def __init__(self, model, color):
+#         self.model = model
+#         self.color = color
+#         print(id(self))
+          
+#     def show(self):
+#         print("Model is", self.model )
+#         print("color is", self.color )
+#         print(id(self))
+          
+# # both objects have different self which 
+# # contain their attributes
+# audi = car("audi a4", "blue")
+# ferrari = car("ferrari 488", "green")
+  
+# audi.show()     # same output as car.show(audi)
+# ferrari.show()  # same output as car.show(ferrari)
+  
+# #note:we can also do like this
+# print("Model for audi is ",audi.model)
+# print("Colour for ferrari is ",ferrari.color)
+
+# print(id(audi))
+# print(id(ferrari))
+
+# class Person:
+ 
+#     # init method or constructor
+#     def __init__(self, name):
+#         self.name = name
+ 
+#     # Sample Method
+#     def say_hi(elf):
+#         print('Hello, my name is', elf.name)
+ 
+ 
+# p = Person('Nikhil')
+# p.say_hi()
+
+# class A():
+#     def __init__(self, something):
+#         print("A init called")
+#         self.something = something
+ 
+ 
+# class B(A):
+#     def __init__(self, something):
+#         # Calling init of parent class
+#         A.__init__(self, something)
+#         print("B init called")
+#         self.something = something
+ 
+ 
+# obj = B("Something")
+
+# class Dog:
+ 
+#     # class attribute
+#     attr1 = "mammal"
+ 
+#     # Instance attribute
+#     def __init__(self, name):
+#         self.name = name
+ 
+# # Driver code
+# # Object instantiation
+# Rodger = Dog("Rodger")
+# Tommy = Dog("Tommy")
+ 
+# # Accessing class attributes
+# print("Rodger is a", Rodger.__class__.attr1)
+# print("Tommy is also a {}".format(Tommy.__class__.attr1))
+ 
+# # Accessing instance attributes
+# print("My name is", Rodger.name)
+# print("My name is {}".format(Tommy.name))
+
+# class Dog:
+ 
+#     # class attribute
+#     attr1 = "mammal"
+    
+ 
+#     # Instance attribute
+#     def __init__(self, name):
+#         self.name = name
+        
+#     def speak(self):
+#         print("My name is {}".format(self.name))
+ 
+# # Driver code
+# # Object instantiation
+# Rodger = Dog("Rodger")
+# Tommy = Dog("Tommy")
+ 
+# # Accessing class methods
+# Rodger.speak()
+# print("Rodger is a {}".format(Rodger.__class__.attr1))
+# Tommy.speak()
+# print("Tommy is a {}".format(Tommy.__class__.attr1))
+
+# Python code to demonstrate how parent constructors
+# are called.
+ 
+# parent class
+# class Person(object):
+ 
+#     # __init__ is known as the constructor
+#     def __init__(self, name, idnumber):
+#         self.name = name
+#         self.idnumber = idnumber
+ 
+#     def display(self):
+#         print(self.name)
+#         print(self.idnumber)
+         
+#     def details(self):
+#         print("My name is {}".format(self.name))
+#         print("IdNumber: {}".format(self.idnumber))
+     
+# # child class
+# class Employee(Person):
+#     def __init__(self, name, idnumber, salary, post):
+#         self.salary = salary
+#         self.post = post
+ 
+#         # invoking the __init__ of the parent class
+#         Person.__init__(self, name, idnumber)
+         
+#     def details(self):
+#         print("My name is {}".format(self.name))
+#         print("IdNumber: {}".format(self.idnumber))
+#         print("Post: {}".format(self.post))
+ 
+ 
+# # creation of an object variable or an instance
+# a = Employee('Rahul', 886012, 200000, "Intern")
+ 
+# # calling a function of the class Person using
+# # its instance
+# a.display()
+# a.details()
+
+# class C(object):
+#     def __init__(self):
+#         self.c = 21
+ 
+#         # d is private instance variable
+#         self.__d = 42
+ 
+ 
+# class D(C):
+#     def __init__(self):
+#         self.e = 84
+#         C.__init__(self)
+ 
+# object1 = D()
+ 
+# # produces an error as d is private instance variable
+# print(object1.c)
+# print(object1.__d)
+
+# class Bird:
+   
+#     def intro(self):
+#         print("There are many types of birds.")
+ 
+#     def flight(self):
+#         print("Most of the birds can fly but some cannot.")
+ 
+# class sparrow(Bird):
+   
+#     def flight(self):
+#         print("Sparrows can fly.")
+ 
+# class ostrich(Bird):
+ 
+#     def flight(self):
+#         print("Ostriches cannot fly.")
+ 
+# obj_bird = Bird()
+# obj_spr = sparrow()
+# obj_ost = ostrich()
+ 
+# obj_bird.intro()
+# obj_bird.flight()
+ 
+# obj_spr.intro()
+# obj_spr.flight()
+ 
+# obj_ost.intro()
+# obj_ost.flight()
+
+# Python program to
+# demonstrate private members
+ 
+# Creating a Base class
+# class Base:
+#     def __init__(self):
+#         self.a = "GeeksforGeeks"
+#         self.__c = "GeeksforGeeks"
+#         #print(self.__c)
+ 
+# # Creating a derived class
+# class Derived(Base):
+#     def __init__(self):
+ 
+#         # Calling constructor of
+#         # Base class
+#         super().__init__()
+#         print("Calling private member of base class: ")
+#         #print(self.__c)
+ 
+ 
+# # Driver code
+# obj1 = Base()
+# print(obj1.a)
+ 
+
+# # raise an AttributeError
+ 
+# obj2 = Derived()
+# # also raise an AtrributeError as
+# # private member of base class
+# # is called inside derived class
+
+# class MyClass:
+  
+#     # Hidden member of MyClass
+#     __hiddenVariable = 0
+    
+#     # A member method that changes 
+#     # __hiddenVariable 
+#     def add(self, increment):
+#         self.__hiddenVariable += increment
+#         print (self.__hiddenVariable)
+   
+# # Driver code
+# myObject = MyClass()     
+# myObject.add(2)
+# myObject.add(5)
+  
+# # This line causes error
+# print (myObject._MyClass__hiddenVariable)
+
+# import numpy as np
+
+# print(np.__version__)
+
+# Import required package
+# import numpy as np
+ 
+# # Creating a Dictionary
+# # with Integer Keys
+# dict = {1: 'Geeks',
+#         6: 'For',
+#         9: 'Geeks'}
+ 
+# # to return a group of the key-value
+# # pairs in the dictionary
+# result = dict.items()
+ 
+# # Convert object to a list
+# data = list(result)
+ 
+# # Convert list to an array
+# numpyArray = np.array(data)
+ 
+# # print the numpy array
+# print(numpyArray)
+
+# import numpy as np
+# x = np.arange(12).reshape((3,4))
+# print(x)
+# sum = x.sum(axis = 1)
+# print(sum)
+
+# import matplotlib.pyplot as plt
+# import seaborn as sns
+
+# sns.distplot([1, 2, 3, 4, 5])
+
+# plt.show()
+
+# print(dir(plt), end=" ")
+
+# from numpy import random
+# import matplotlib.pyplot as plt
+# import seaborn as sns
+
+# sns.distplot(random.normal(loc=1, scale=2, size=5))
+
+# plt.show()
+
+# from numpy import random
+# import matplotlib.pyplot as plt
+# import seaborn as sns
+
+# sns.distplot(random.binomial(n=10, p=0.5, size=10))
+
+# plt.show()
+
+
+# import matplotlib.pyplot as plt
+# import seaborn as sns
+
+# sns.distplot([0, 1, 2, 3, 4, 5])
+
+# plt.show()
+
+# from numpy import random
+# import matplotlib.pyplot as plt
+# import seaborn as sns
+
+# x = random.binomial(n=10, p=0.5, size=5)
+
+# print(x)
+
+# sns.distplot(random.binomial(n=10, p=0.5, size=5))
+
+# plt.show()
+
+# from numpy import random
+# import matplotlib.pyplot as plt
+# import seaborn as sns
+
+# sns.distplot(random.binomial(n=10, p=0.5, size=1000), hist=True, kde=False)
+
+# plt.show()
+
+# from numpy import random
+# import matplotlib.pyplot as plt
+# import seaborn as sns
+
+# sns.distplot(random.normal(loc=50, scale=5, size=1000), hist=False, label='normal')
+# sns.distplot(random.binomial(n=100, p=0.5, size=1000), hist=False, label='binomial')
+
+# plt.show()
+
+# from numpy import random
+# import matplotlib.pyplot as plt
+# import seaborn as sns
+
+# sns.distplot(random.poisson(lam=2, size=1000), kde=False)
+# # sns.distplot(random.uniform(size=1000), hist=False)
+
+# plt.show()
+
+# x = random.poisson(lam=1, size=10)
+
+# print(x)
+
+# from numpy import random
+# import matplotlib.pyplot as plt
+# import seaborn as sns
+
+# sns.distplot(random.logistic(size=1000))
+
+# plt.show()
+
+# from numpy import random
+# import matplotlib.pyplot as plt
+# import seaborn as sns
+
+# sns.distplot(random.logistic(loc=1, scale=2, size=(1000)))
+
+# plt.show() 
+
+# sns.distplot(random.normal(scale=20, size=1000), hist=False, label='normal')
+# sns.distplot(random.logistic(size=1000), hist=False, label='logistic')
+
+# plt.show()
+
+# from numpy import random
+# import matplotlib.pyplot as plt
+# import seaborn as sns
+
+# sns.random.multinomial(n=6, pvals=[1/6, 1/6, 1/6, 1/6, 1/6, 1/6])
+# plt.show()
+
+# from numpy import random
+# import matplotlib.pyplot as plt
+# import seaborn as sns
+
+# sns.distplot(random.exponential(size=1000), hist=False)
+
+# plt.show()
+
+# from numpy import random
+# import matplotlib.pyplot as plt
+# import seaborn as sns
+
+# sns.distplot(random.chisquare(df=1, size=1000), hist=False)
+
+# plt.show()
+
+# from numpy import random
+# import matplotlib.pyplot as plt
+# import seaborn as sns
+
+# sns.distplot(random.rayleigh(size=1000), hist=False)
+
+# plt.show() 
+
+# from numpy import random
+
+# x = random.pareto(a=2, size=(2, 3))
+
+# print(x)
+
+# from numpy import random
+# import matplotlib.pyplot as plt
+# import seaborn as sns
+
+# sns.distplot(random.pareto(a=2, size=1000), kde=False)
+
+# plt.show()
+
+# from numpy import random
+# import matplotlib.pyplot as plt
+# import seaborn as sns
+
+# sns.distplot(random.zipf(a=2, size=1000), kde=False)
+
+# plt.show()
+
+
+# import numpy
+# import matplotlib.pyplot as plt
+# numpy.random.seed(2)
+
+# x = numpy.random.normal(3, 1, 100)
+# y = numpy.random.normal(150, 40, 100) / x
+
+# plt.scatter(x, y)
+# plt.show()
+# print(x)
+# print(y)
+
+# from numpy import random
+# import matplotlib.pyplot as plt
+# import seaborn as sns
+
+# sns.distplot(random.normal(3, 1, 100))
+
+# plt.show() 
+
+# x = [4, 5, 10, 4, 3, 11, 14 , 6, 10, 12]
+# y = [21, 19, 24, 17, 16, 25, 24, 22, 21, 21]
+
+# data = list(zip(x, y))
+# print(data)
+
+# import numpy
+
+# X = numpy.array([3.78, 2.44, 2.09, 0.14, 1.72, 1.65, 4.92, 4.37, 4.96, 4.52, 3.69, 5.88]).reshape(-1,1)
+# print(X)
+

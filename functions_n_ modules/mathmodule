@@ -1,0 +1,15 @@
+import math
+
+x = min(5, 10, 25)
+y = max(5, 10, 25)
+print(x)
+print(y)
+
+z = abs(-5.80)
+print(z)
+
+p = pow(4, 3)
+print(p)
+
+s = math.sqrt(64)
+print(s)

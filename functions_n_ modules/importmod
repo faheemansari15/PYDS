@@ -1,0 +1,12 @@
+#import mymodule
+from mymodule import person1
+from mymodule import greeting
+
+greeting("Faheem")
+
+print(person1["name"])
+
+
+
+# x = dir(mymodule)
+# print(x)

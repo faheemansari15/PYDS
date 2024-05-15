@@ -1,7 +1,7 @@
-name = ' Fahim Altamash Ansari'
+name = 'Fahim Altamash Ansari'
 fname = name[:5]
-lname = name[-7:]
-mname = name[6:-8]
+lname = name[-6:]
+mname = name[6:-7]
 print(fname, mname, lname)
 
 #reversed
@@ -9,7 +9,7 @@ rev_name = name[::-1]
 print(rev_name)
 
 #middle name reversed
-mname_rev = name[6:-8][::-1]
+mname_rev = name[6:-7][::-1]
 print(mname_rev)
 
 #every index character
